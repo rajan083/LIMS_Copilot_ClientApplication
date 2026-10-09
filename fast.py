@@ -21,7 +21,6 @@ os.makedirs(EXPORTS_DIR, exist_ok=True)
 conv_id = requests.post(f"{URL}/v1/conversations", headers=HEADERS).json()["conversation_id"]
 CONV= f"{URL}/v1/conversations/{conv_id}"
 
-
 model= "gemini-3.6-flash"
 
 def stt(filename, retries=3):
@@ -36,7 +35,6 @@ def stt(filename, retries=3):
                     "Transcribe this audio exactly. Return only the transcript.",
                     types.Part.from_bytes(data=audio, mime_type="audio/wav")]
                 )
-            usage= response.usage_metadata
             break
         
         except Exception as e:
