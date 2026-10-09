@@ -1,0 +1,9 @@
+.env
+.venv
+model_name.ipynb
+speech.wav
+token_usage.ipynb
+tts_model.ipynb
+asyncc.py
+exports/
+voice.wav
