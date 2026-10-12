@@ -96,6 +96,8 @@ def chat():
         prompt= input("You: (type, or /v for voice): ")
         if prompt.lower().strip() in ("exit","quit"):
             break
+        if not prompt:
+            continue
         if prompt.strip().lower() == "/v":
             wav=record()
             if not wav:
